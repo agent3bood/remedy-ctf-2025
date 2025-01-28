@@ -79,3 +79,7 @@ contract Vault4 is Initializable, UUPSUpgradeable, OwnableUpgradeable {
     }
 }
 ```
+
+### Read More
+
+[Metamorphic Smart Contracts](https://mixbytes.io/blog/metamorphic-smart-contracts-is-evm-code-truly-immutable)
