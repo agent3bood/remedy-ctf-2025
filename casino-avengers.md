@@ -16,6 +16,10 @@ them, as a team you are determined to find a way...
 
 ### Step 1:
 
+Because the *Casino* contract is using vulnerable version
+of [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v4.7.0/contracts/utils/cryptography/ECDSA.sol#L57)
+ECDSA library. Which allow for signature malleability. The same signature can be reused if two different formats.
+
 Find the original signature used for *pause*, it is of *length 65 bytes*, convert it
 to [Compact Signature Representation](https://eips.ethereum.org/EIPS/eip-2098), it is still valid signature.
 Once you have the new signature, call `pause(compactSignature, sameSalt)` to unpause the Casino.
